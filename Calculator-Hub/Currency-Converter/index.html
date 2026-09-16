@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency-Converter</title>
+    <link rel="stylesheet" href="converter.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./Assets/exchange-rate.png" type="image/x-icon">
+</head>
+<body>
+    
+    <main class="container">
+
+        <header class="converter-header">
+            <h1>Currency Converter</h1>
+            <p>Convert currencies quickly and easily. </p>
+        </header>
+
+        <form id="currency-form">
+
+            <div class="amt">
+                <label for="amount">Enter Amount: </label>
+                <input type="number" id="amount" value="1" min="0" step="any" placeholder="Enter amount" required>
+            </div>
+
+            <div class="dropdown">
+
+                <div class="currency-box from">
+
+                    <label for="from">From:</label>
+
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt = "United States flag" class="currency-flag">
+
+                        <select name="from" id="from" aria-label="Convert from currency"></select>
+
+                    </div>
+                </div>
+
+                <button type="button" class="swap_btn" aria-label="Swap Currencies" title="Swap currencies">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <div class="currency-box to" >
+                    <label for="to">To:</label>
+
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/NP/flat/64.png" alt="Nepali flag" class="currency-flag">
+
+                        <select name="to" id="to" aria-label="Convert to currency">
+
+                        </select>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="msg" aria-live="polite">
+                1 USD = 144.96 NPR
+            </div>
+
+            <button type="submit" class="btn">
+
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+        </form>
+
+    </main>
+
+
+
+    <script src="converter.js"></script>
+</body>
+</html>
