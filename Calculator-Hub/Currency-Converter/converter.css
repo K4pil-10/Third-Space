@@ -31,9 +31,17 @@ body{
 }
 
 .converter-header h1{
-    font-size: 28px;
+    font-size: 2rem;
     color: #006d77;
     margin-bottom: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.converter-header p{
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .amt{
@@ -154,6 +162,18 @@ body{
 .btn:hover{
     background: #e76f00;
     transform: translateY(-2px);
+}
+
+.btn i{
+    cursor: pointer;
+    color: #012a4a;
+    transition: 0.3s ease-in;
+
+}
+
+.btn i:hover{
+    color: #ffffff;
+    transform: rotate(180deg);
 }
 
 .btn:active{

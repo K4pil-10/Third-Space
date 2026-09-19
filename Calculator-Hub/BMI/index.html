@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="bmi.css">
+    <link rel="shortcut icon" href="./Assets/bmi.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="bmi_container">
+        <h1>BMI(Body Mass Index)</h1>
+        <p class="sub_title">Calculate your BMI.</p>
+
+        <div class="bmi_content">
+
+            <div class="bmi_form_section">
+
+                <form id="bmi_form">
+
+                    <div class="input_grp">
+                        <label for="weight">Weight: </label>
+                        <div class="input_box">
+                            <input type="number" placeholder="Enter weight in kg" id="weight" min="1" step="any" required>
+                            <span>kg</span>
+                        </div>
+                    </div>
+
+                    <div class="input_grp">
+                        <label for="height">Height: </label>
+                        <div class="input_box">
+                            <input type="number" id="height" placeholder="Enter height in cm" min="1" step="any" required> 
+                            <span>cm</span>
+                        </div>
+                    </div>
+
+                    <button type="submit">Calculate BMI</button>
+
+                    <button type="button" class="clear_btn" id="clearBTN">Clear</button>
+
+                </form>
+
+                <div class="result" id="result">
+                    <h2>Your BMI: </h2>
+                    <p class="bmi_value" id="bmiValue">--</p>
+                    <p class="category" id="category">Enter your details above.</p>
+                </div>
+
+            </div>
+
+                <div class="bmi_info">
+                    <h3>BMI Categories</h3>
+
+                    <div class="category_row">
+                        <span>Under-Weight</span>
+                        <span>Below 18.5</span>
+                    </div>
+
+                    <div class="category_row">
+                        <span>Normal</span>
+                        <span>18.5 - 24.9</span>
+                    </div>
+
+                    <div class="category_row">
+                        <span>Over-Weight</span>
+                        <span>25 - 29.9</span>
+                    </div>
+
+                    <div class="category_row">
+                        <span>Obesity</span>
+                        <span>30 or above</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    <script src="bmi.js"></script>
+    
+</body>
+</html>

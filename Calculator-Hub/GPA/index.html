@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="shortcut icon" href="./Assets/gpa.png" type="image/x-icon">
+    <link rel="stylesheet" href="gpa.css">
+</head>
+<body>
+    
+    <div class="gpa_container">
+
+        <h1>GPA Calculator</h1>
+        <h3>Calculate Your GPA</h3>
+
+        <div class="main_content">
+
+            <div class="subjects_section">
+
+                <div id="subjects">
+
+                        <div class="subject">
+
+                            <div class="subject_top">
+                                <label for="Science">Science:</label>
+                                <button class="clear_subject">Clear</button>
+                            </div>
+
+                            <input type="number" class="marks" placeholder="Enter marks" min="0" max="100" id="Science">
+
+
+                        </div>
+
+                        <div class="subject">
+                            <div class="subject_top">
+                                <label for="Maths">Maths:</label>
+                                <button class="clear_subject">Clear</button>
+                            </div>
+
+                            <input type="number" class="marks" placeholder="Enter marks" min="0" max="100" id="Maths">
+
+                        </div>
+
+                        <div class="subject">
+                            <div class="subject_top">
+                                <label for="English">English: </label>
+                                <button class="clear_subject">Clear</button>
+                            </div>
+
+                            <input type="number" class="marks" placeholder="Enter marks"
+                            min="0" max="100" id="English">
+
+                        </div>
+
+
+                        <div class="subject">
+                            <div class="subject_top">
+                                <label for="Optional Maths">Optiona-Maths:</label>
+                                <button class="clear_subject">Clear</button>
+                            </div>
+
+                            <input type="number" class="marks" placeholder="Enter marks" min="0" max="100" id="Optiona-Maths">
+                        </div>
+
+                        <div class="subject">
+                            <div class="subject_top">
+                                <label for="Computer">Computer:</label>
+                                <button class="clear_subject">Clear</button>
+                            </div>
+
+                            <input type="number" class="marks" placeholder="Enter Marks" min="0" max="100" id="Computer"> 
+                        </div>  
+
+
+                    <button class="add_subject_btn">
+                    +Add Subjects
+                    </button>
+
+                    <button class="calc_gpa_btn">
+                    Calculate GPA
+                    </button>
+
+                    <button class="clear_all_btn">
+                    Clear All
+                    </button>
+
+                    <div class="result">
+                    <h3>Your GPA: </h3>
+                    <h2 id="gpa">--</h2>
+                    <p id="message">Enter your subject marks above.
+
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gpa_categories">
+                <h3>GPA Categories</h3>
+
+                <div class="category">
+                    <span>90 - 100</span>
+                    <span>4.00</span>
+                </div>
+
+                <div class="category">
+                    <span>80 - 89</span>
+                    <span>3.60</span>
+                </div>
+
+                <div class="category">
+                    <span>70 - 79</span>
+                    <span>3.20</span>
+                </div>
+
+                <div class="category">
+                    <span>60 - 69</span>
+                    <span>2.80</span>
+                </div>
+
+                <div class="category">
+                    <span>50 - 59</span>
+                    <span>2.40</span>
+                </div>
+
+                <div class="category">
+                    <span>40 - 49</span>
+                    <span>2.00</span>
+                </div>
+
+                <div class="category">
+                    <span>35 - 39</span>
+                    <span>1.60</span>
+                </div>
+
+                <div class="category">
+                    <span>Below 35</span>
+                    <span>NG</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+ <script src="gpa.js"></script>
+</body>
+</html>

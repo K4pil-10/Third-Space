@@ -1,4 +1,6 @@
-let BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
+let Primary_BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
+
+let Fallback_Base_Url = "https://latest.currency-api.pages.dev/v1/currencies";
 
 let dropdowns  = document.querySelectorAll(".dropdown select");
 
@@ -48,7 +50,7 @@ const updateExchange_Rate = async() =>{
     let amt = document.querySelector(".amt input");
     let amtVal = amt.value;
 
-    if (amtVal === "" || amtVal <1){
+    if (amtVal === "" || amtVal < 1){
         amtVal = 1;
         amt.value = "1";
     }
@@ -58,13 +60,29 @@ const updateExchange_Rate = async() =>{
 
     msg.innerText = "Getting exchange rate...";
 
+    await new Promise((resolve) => setTimeout(resolve,300));
+        
+
     try{
-        const URL = `${BASE_URL}/${fromVal}.json `;
-        let response = await fetch(URL);
+        let response;
+        try{
+
+            response = await fetch(`${Primary_BASE_URL}/${fromVal}.json`);
+
+            if (!response.ok) throw new Error("Primary Fetch failed");
+        }
+        catch (e){
+            response = await fetcch (` ${Fallback_Base_Url}/${fromVal}.json`);
+        }
+
         let data = await response.json();
         let rate = data[fromVal][toVal];
 
+        
+        if (!rate) throw new Error ("Currency rate unavailable");
+
         let finalAmt = (amtVal * rate).toFixed(2);
+
         msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmt} ${toCurr.value}`;
     }
     catch (error) {
