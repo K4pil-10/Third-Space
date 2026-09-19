@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap</title>
+    <link rel="stylesheet" href="Frontend.css">
+</head>
+<body>
+   
+    <div class="roadmap">
+        <header class="header">
+            <span class="span">Journey of a Frontend Developer</span>
+            <h1>Frontend Developer Roadmap</h1>
+            <p>Ready to begin your journey!</p>
+        </header>
+
+        <section class="section">
+
+            <div class="progress">
+                <b id="totaldays">0</b>
+                <span>Total Days</span>
+            </div>
+
+            <div class="progress">
+                <b id="completed days">0</b>
+                <span>Completed Days</span>
+            </div>
+
+            <div class="progress">
+                <b id="percentage">0%</b>
+                <span>Percentage</span>
+            </div>
+
+            <div class="progress">
+                <b id="current">1</b>
+                <span> Current Day</span>
+
+            </div>
+        </section>
+
+
+
+     <div class="card" style="padding:18px;margin-bottom:18px">
+
+     
+     <div style=" display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
+
+        <strong> Journey Path</strong>
+
+        <span id="progress" class="one">
+            0/0 Days
+        </span>
+     </div>
+
+     <div class="wrap">
+        <div id="one" class="two">
+
+        </div>
+     </div>
+
+     <div class="bar">
+      <input type="text" class="search">
+
+        <button class="btn" onclick="openall()">Open All</button>
+         <button class="btn" onclick="closeall()">Close All</button>
+          <button class="btn" onclick="resetProgress()">Reset Progress</button>
+     
+     </div>
+
+
+     <main id="time" class="time"></main>
+
+     <footer>
+       <P> All the best for your future!</P>
+     </footer>
+     </div>
+      <script src="Frontend.js"></script>
+    </body>
+    </html>
