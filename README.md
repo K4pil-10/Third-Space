@@ -1,4 +1,33 @@
-<<<<<<< HEAD
+#Third-Space
+
+<h1>About: </h1>
+
+<h3>AKS BYTEFORCE is a team of Third-Space where we create different types of projects which helps to develop our skills and help to win prizes. We are team of developers where we create new things and build our skills together. It is a team of three members. We are showing our projects which we are building together during Third-Space event. More Projects will be coming soon. And I am shweta shkula in this week i contribute in roadmap,calculator port and AKS BYTEFORCE
+</h3>
+
+<h1>Technologies Used This week: </h1>
+
+<h3>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Java Script</li>
+</ul>
+</h3>
+
+<h1>Motive for this projects: </h1>
+
+<h3>
+<ul>
+<li>1. Student related necessary tools.</li>
+<li>2. Easy to use tools.</li>
+<li>3. To win prizes (members)</li>
+<li>4. Learn new things from IT </li>
+</ul>
+</h3>
+<h1>Projects This Week: <h1>
+<h3>
+<ul><<<<<<< HEAD
 # Third-Space
 =======
 #Third-Space
