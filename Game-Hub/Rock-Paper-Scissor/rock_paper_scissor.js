@@ -1,90 +1,119 @@
-var choices = ['rock', 'paper', 'scissors'];
-var pictures = {
+var moves = ['rock', 'paper', 'scissors'];
+
+var handSigns = {
     rock: '✊',
     paper: '✋',
     scissors: '✌️'
 };
 
-var playerScore = 0;
-var computerScore = 0;
+var myScore = 0;
+var cpuScore = 0;
 var playing = false;
 
-var playerHand = document.getElementById('playerHand');
-var computerHand = document.getElementById('computerHand');
-var playerScoreText = document.getElementById('playerScore');
-var computerScoreText = document.getElementById('computerScore');
+var myHand = document.getElementById('playerHand');
+var cpuHand = document.getElementById('computerHand');
+var myScoreText = document.getElementById('playerScore');
+var cpuScoreText = document.getElementById('computerScore');
 var result = document.getElementById('result');
 var message = document.getElementById('message');
 var startButton = document.getElementById('startButton');
 var resetButton = document.getElementById('resetButton');
-var buttons = document.querySelectorAll('.choice');
+var choiceButtons = document.querySelectorAll('.choice');
 
 startButton.onclick = startGame;
 resetButton.onclick = resetGame;
 
-for (var i = 0; i < buttons.length; i++) {
-    buttons[i].onclick = function () {
-        play(this.getAttribute('data-choice'));
-    };
+for (var i = 0; i < choiceButtons.length; i++) {
+    choiceButtons[i].onclick = chooseMove;
 }
 
 function startGame() {
     playing = true;
     startButton.style.display = 'none';
-    setButtons(true);
-    result.textContent = 'Choose your move';
-    message.textContent = 'The computer will choose at the same time.';
+    setChoiceButtons(true);
+    result.textContent = 'Pick a move';
+    message.textContent = "Let's see what the computer picks.";
 }
 
-function play(playerChoice) {
+function chooseMove() {
+    var myMove = this.getAttribute('data-choice');
+    playRound(myMove);
+}
+
+function playRound(myMove) {
+    var cpuMove;
+
     if (!playing) {
         return;
     }
 
-    var computerChoice = choices[Math.floor(Math.random() * 3)];
+    cpuMove = chooseCpuMove();
+    updateHands(myMove, cpuMove);
 
-    playerHand.textContent = pictures[playerChoice];
-    computerHand.textContent = pictures[computerChoice];
-
-    if (playerChoice === computerChoice) {
-        result.textContent = 'Draw!';
-        message.textContent = 'You both chose ' + computerChoice + '.';
-    } else if (
-        playerChoice === 'rock' && computerChoice === 'scissors' ||
-        playerChoice === 'paper' && computerChoice === 'rock' ||
-        playerChoice === 'scissors' && computerChoice === 'paper'
-    ) {
-        playerScore++;
-        playerScoreText.textContent = playerScore;
-        result.textContent = 'You win!';
-        message.textContent = 'Your move was better.';
+    if (myMove === cpuMove) {
+        showDraw(cpuMove);
+    } else if (didIWin(myMove, cpuMove)) {
+        showMyWin();
     } else {
-        computerScore++;
-        computerScoreText.textContent = computerScore;
-        result.textContent = 'Computer wins!';
-        message.textContent = 'The computer chose the better move.';
+        showCpuWin();
     }
 }
 
-function setButtons(enabled) {
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = !enabled;
+function chooseCpuMove() {
+    var randomPlace = Math.floor(Math.random() * moves.length);
+    return moves[randomPlace];
+}
+
+function updateHands(myMove, cpuMove) {
+    myHand.textContent = handSigns[myMove];
+    cpuHand.textContent = handSigns[cpuMove];
+}
+
+function didIWin(myMove, cpuMove) {
+    return (myMove === 'rock' && cpuMove === 'scissors') ||
+        (myMove === 'paper' && cpuMove === 'rock') ||
+        (myMove === 'scissors' && cpuMove === 'paper');
+}
+
+function showDraw(cpuMove) {
+    result.textContent = 'It is a tie!';
+    message.textContent = 'You both picked ' + cpuMove + '.';
+}
+
+function showMyWin() {
+    myScore++;
+    myScoreText.textContent = myScore;
+    result.textContent = 'Nice one, you win!';
+    message.textContent = 'That was a good choice.';
+}
+
+function showCpuWin() {
+    cpuScore++;
+    cpuScoreText.textContent = cpuScore;
+    result.textContent = 'The computer wins this round.';
+    message.textContent = 'Try a different move next time.';
+}
+
+function setChoiceButtons(enabled) {
+    for (var i = 0; i < choiceButtons.length; i++) {
+        choiceButtons[i].disabled = !enabled;
     }
 }
 
+// Start the scores and hands over from the beginning.
 function resetGame() {
-    playerScore = 0;
-    computerScore = 0;
+    myScore = 0;
+    cpuScore = 0;
     playing = false;
 
-    playerScoreText.textContent = '0';
-    computerScoreText.textContent = '0';
-    playerHand.textContent = '?';
-    computerHand.textContent = '?';
+    myScoreText.textContent = '0';
+    cpuScoreText.textContent = '0';
+    myHand.textContent = '?';
+    cpuHand.textContent = '?';
     result.textContent = 'Press Start Game to begin';
     message.textContent = 'Choose a move to play.';
     startButton.style.display = 'inline-block';
-    setButtons(false);
+    setChoiceButtons(false);
 }
 
-resetGame();
+resetGame(); 

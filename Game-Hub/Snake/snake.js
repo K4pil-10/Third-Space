@@ -72,7 +72,12 @@ function draw() {
   context.fill();
 
   for (var i = 0; i < snake.length; i++) {
-    context.fillStyle = i === 0 ? '#26734d' : '#38a169';
+    if (i === 0) {
+      context.fillStyle = '#26734d';
+    } else {
+      context.fillStyle = '#38a169';
+    }
+
     context.fillRect(
       snake[i].x * squareSize + 1,
       snake[i].y * squareSize + 1,
@@ -166,10 +171,21 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-document.getElementById('upBtn').onclick = function() { changeDirection('up'); };
-document.getElementById('downBtn').onclick = function() { changeDirection('down'); };
-document.getElementById('leftBtn').onclick = function() { changeDirection('left'); };
-document.getElementById('rightBtn').onclick = function() { changeDirection('right'); };
+document.getElementById('upBtn').onclick = function () {
+  changeDirection('up');
+};
+
+document.getElementById('downBtn').onclick = function () {
+  changeDirection('down');
+};
+
+document.getElementById('leftBtn').onclick = function () {
+  changeDirection('left');
+};
+
+document.getElementById('rightBtn').onclick = function () {
+  changeDirection('right');
+};
 start.onclick = startGame;
 
 reset();
