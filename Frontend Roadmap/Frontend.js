@@ -249,7 +249,7 @@ const phases = [
             Days
             </div>
 
-            <div class="chevron">hi</div
+           
 
             `;
 
