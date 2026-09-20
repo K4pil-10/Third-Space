@@ -24,7 +24,7 @@
 </ul>
 </h3>
 
-<h1>Motivie for this projects: </h1>
+<h1>Motvie for this projects: </h1>
 
 <h3>
 <ul>
@@ -39,7 +39,7 @@
 <h3>
 <ul>
 <li>1. 📁 AKS ByteForce(more projects will added in future.)</li>
-<li>2. 📁 Calculator-HUB(more projects will added in future.)</li>
+<li>2. 📁 Calculator-Port(more projects will added in future.)</li>
 <li>3. 📁 Frontend-Road-Map</li>
 <li>4. 📁 Game-Hub (more projects will added in future.)</li>
 </ul>
@@ -124,7 +124,7 @@
 </ul>
 </h3>
 
-<h3> 3. Akarshan Poudel(work on Game-Hub.).
+<h3> 3.Ocean Dumre(work on Game-Hub.).
 <ul>
 <li>Snake Game</li>
 <li>Hang-Man Game</li>
