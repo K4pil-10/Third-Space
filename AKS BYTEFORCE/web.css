@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
 body{
@@ -61,10 +62,15 @@ nav a:hover{
 .web{
     max-width: 1000px;
     margin: auto;
-    padding: 80px 30px;
+    padding: 20px 30px 80px 30px;
 }
 
 
+h2{
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 35px;
+}
 
 
 
@@ -127,7 +133,14 @@ nav a:hover{
 .sk:hover h2{
     color: #ffbd00;
 }
+footer{
+    text-align: center;
+}
 
+
+footer p{
+    margin: 10px;
+}
 
 
 @media (max-width:650px){
