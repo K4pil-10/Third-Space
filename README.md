@@ -119,12 +119,11 @@
 <ul>
 <li>AKS Byte Force HUB(where our projects are link)</li>
 <li>Frontend-Web-Development Road Map</li>
-<li>Calculator HUB</li>
-<li>GPA Calc</li>
+<li>Calculator-Port</li>
 </ul>
 </h3>
 
-<h3> 3. Akarshan Poudel(work on Game-Hub.).
+<h3> 3. Ocean Dumre(work on Game-Hub.).
 <ul>
 <li>Snake Game</li>
 <li>Hang-Man Game</li>
