@@ -24,7 +24,7 @@
 </ul>
 </h3>
 
-<h1>Motivie for this projects: </h1>
+<h1>Motive for this projects: </h1>
 
 <h3>
 <ul>
