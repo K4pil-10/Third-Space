@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #4a1504;
+    color: white;
+    line-height: 1.6;
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+}
+
+header{
+    background: #361e16;
+    border-bottom: 1px solid #621e07;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.header h1{
+    font-size: 30px;
+    letter-spacing:3px;
+    color: #ffffff;
+    text-align: left;
+
+}
+
+nav{
+    display: flex;
+    gap: 35px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color:#ffbd00;
+}
+
+.web{
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 30px;
+}
+
+
+
+
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+.sk{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    background-color: #372929;
+    border-radius:16px;
+    padding: 30px 20px;
+    border: 2px solid #403434;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease,box-shadow 0.3s ease;
+}
+
+.sk:hover{
+    transform: translateY(-8px);
+    border-color: #621e07;
+    box-shadow: 0 10px 25px rgba(192,73,3,0.2);
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+
+}
+
+
+.sk:hover .image img{
+    transform: scale(1.1);
+}
+
+.sk h2{
+    font-size:  20px;
+    color: white;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.sk:hover h2{
+    color: #ffbd00;
+}
+
+
+
+@media (max-width:650px){
+    #projects{
+        grid-template-columns: 1fr;
+    }
+}
+
