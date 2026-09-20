@@ -24,11 +24,10 @@
 </ul>
 </h3>
 
-<<<<<<< HEAD
+
 <h1>Motvie for this projects: </h1>
-=======
+
 <h1>Motive for this projects: </h1>
->>>>>>> 2076cac75d3597e2067f89b27acd80e4cc75ac3a
 
 <h3>
 <ul>
@@ -127,11 +126,11 @@
 </ul>
 </h3>
 
-<<<<<<< HEAD
+ 
 <h3> 3.Ocean Dumre(work on Game-Hub.).
-=======
+
 <h3> 3. Ocean Dumre(work on Game-Hub.).
->>>>>>> 2076cac75d3597e2067f89b27acd80e4cc75ac3a
+
 <ul>
 <li>Snake Game</li>
 <li>Hang-Man Game</li>
