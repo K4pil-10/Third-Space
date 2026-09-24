@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic-tac-toe.css">
+    <link rel="shortcut icon" href="./Assets/tic-tac-toe.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <h1 class="title">Tic Tac Toe</h1>
+        <div class="mode_btns">
+            <button id="pvp_btn" class="mode_btn active">Player Vs Player</button>
+
+            <button id="pvc_btn" class="mode_btn">Player Vs Computer</button>
+        </div>
+    </nav>
+
+    <section class="controls">
+        <label for="level">Computer: </label>
+        <select  id="level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </section>
+
+    <div class="win hide">
+        <p id="wins">Winner</p>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="game">
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+                <button class="box colors"></button>
+            </div>
+        </div>
+
+        <p id="turn">Player X's Turn</p>
+
+        <div class="btns">
+            <button id="reset_btn">Reset-BTN</button>
+            <button id="new_game">New Game</button>
+        </div>
+
+    </main>
+    <script src="tic-tac-toe.js"></script>
+    
+</body>
+</html>
