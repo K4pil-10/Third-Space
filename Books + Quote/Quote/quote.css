@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#073b4c ;
+    color: white;
+    line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+header{
+    background-color: #727d71;
+    color: white;
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+}
+
+
+header h1{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+    padding: 10px;
+}
+
+header h1 , nav a:hover{
+    color: #f4c95d;
+}
+
+#about{
+    width: 90%;
+    max-width: 1200px;
+    margin: 55px auto;
+    padding: 40px;
+    background-color: #355070;
+    border-radius: 15px;
+    color: #f4c95d;
+    transition: 0.3s ease;
+}
+
+#about:hover{
+    transform: translateY(-3px);
+}
+
+.rel_abt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.rel_abt img{
+    height: 350px;
+    width: 50%;
+    border-radius: 15px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+
+.rel_abt > div{
+    flex: 1;
+}
+
+.text{
+    font-size: 1.05rem;
+    color: white;
+}
+
+.rel_abt:hover{
+    transform: translateY(-3px);
+}
+
+.rel_abt img:hover{
+    transform: scale(1.02);
+}
+
+#quote{
+    
+}
+

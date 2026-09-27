@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px ;
+}
+
+body{
+    background: #001d3d;
+    color: #fffcf2;
+    line-height:1.6;
+    font-family: 'Raleway', sans-serif;
+}
+
+header{
+    width: 100%;
+    min-height: 80px;
+    background: #252422;
+    padding: 15px 7%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+header h1{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+nav{
+    display: flex;
+    gap: 40px;
+}
+
+nav a{
+    color: #fffcf2;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+header h1, nav a:hover{
+    color: #f4c95d;
+}
+
+
+#related{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+#related img{
+    height: 350px;
+    width: 55%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+#related img:hover{
+    /* transform: translateY(-3px); */
+    transform: scale(1.02);
+}
+
+#related > div{
+    flex: 1;
+}
+#about{
+    width: 90%;
+    max-width: 1200px;
+    margin: 55px auto;
+    padding: 40px;
+    background: #ffe69c;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    color: #001d3d;
+}
+
+
+#related h2{
+    color: #1d3557;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.text{
+    font-size: 1.05rem;
+    color: #252422;
+    text-align: center;
+    letter-spacing: 0.15px;
+}
+
+#book{
+    width: 90%;
+    max-width: 1250px;
+    margin: 80px auto;
+}
+
+#book > h2{
+    text-align: center;
+    color: #f4c95d;
+    font-size: 2rem;
+    margin-bottom: 35px;
+    font-family: 'Bebas Neus', sans-serif;
+    letter-spacing: 1.5px;
+    margin-bottom: 45px;
+}
+
+.books_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px , 1fr ));
+    gap: 30px;
+    margin-bottom: 30px;
+    background: #252422;
+    border-radius: 20px;
+}
+
+
+.abt_book{
+    position: relative;
+    border-radius: 18px;
+    padding: 30px 25px;
+    min-height: 520;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+
+}
+
+.abt_book:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.box{
+
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img{
+    width: 100%;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.img img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.abt_book:hover .img img{
+    transform: scale(1.04);
+}
+
+.abt_book p{
+    width: 100%;
+    margin: 6px 0;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+}
+
+.abt_book p :first-of-type{
+    font-size:1.15rem;
+    font-weight: bold;
+    color: #f4c95d;
+    margin-bottom: 4px;
+}
+
+.abt_book a{
+    color: #1d6fd1;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.abt_book a:hover{
+    text-decoration: underline;
+    color: #e63946;
+}
+
+body >h1{
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    background: #252422;
+    border: 1px solid #ffe69c;
+    border-radius: 8px;
+    transition: 0.3s ease;
+
+}
+
+body >h1:hover{
+    transform: translateY(-3px);
+    background-color: #e63946;
+}
+
+footer{
+    margin-top: 50px;
+    padding: 25px;
+    background:#023047 ;
+    color: white;
+    text-align: center;
+}
+
+footer p{
+    font-size: 0.95rem;
+}
+
+@media (max-width: 380px){
+    header h1{
+        font-size: 1.5rem;
+    }
+
+    nav{
+        gap: 14px;
+    }
+
+    nav a{
+        font-size: 0.72rem;
+    }
+
+    #related img{
+        height: 190px;
+    }
+
+    .img{
+        height: 220px;
+    }
+
+    .abt_book{
+        padding: 17px;
+    }
+}

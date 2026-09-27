@@ -222,6 +222,3 @@ function  findWinningSpot(pattern, symbol){
 
 reset_btn.addEventListener("click", reset_game);
 new_game_btn.addEventListener("click", reset_game)
-
-
-//finally done now let keep it in main branch 
