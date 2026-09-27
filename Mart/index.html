@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mart</title>
+    <link rel="stylesheet" href="mart.css">
+</head>
+<body>
+    <nav>
+        <h2>Mart</h2>
+        <button id ="cartButton">Cart
+        <b id="cartNumber">0</b>
+        </button>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to AKS Mart</h1>
+        <p>Shop happily!</p>
+    </div>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search products">
+
+        <select id="category">
+            <option value="all">All</option>
+            <option value="fashion">Fashion</option>
+            <option value="electronics">Electronics</option>
+            <option value="food">Food</option>
+            <option value="accessories">Accessories</option>
+        </select>
+    </div>
+
+    <div id="products"></div>
+    <div id="dark"></div>
+    <div id="cart">
+        <div class="cart-heading">
+            <h2>Your Cart</h2>
+            <button id="closeCart">X</button>
+        </div>
+     <div id="cartItems"></div>
+     <div class="total">
+        <p>Total</p>
+        <p id="totalPrice">Rs.0</p>
+     </div>
+          <button id="checkout">Checkout</button>
+    </div>
+    <div id="orderMessage">
+        <h2>Order Placed!</h2>
+        <p>Thank you for visiting our site!</p>
+        <button id="done">Done</button>
+    </div>
+    <script src="mart.js"></script>
+</body>
+</html>

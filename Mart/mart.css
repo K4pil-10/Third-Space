@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background: #c49090;
+}
+
+nav{
+    background: #983c48;
+    color:white;
+    padding: 20px ;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2{
+    color: white;
+}
+
+#cartButton{
+    background: #22c581;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero{
+    background: #722d2d;
+    color:white;
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    color:#ddd
+}
+
+.search-box{
+    max-width:1100px ;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 15px;
+}
+
+#search{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#category{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#products{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+}
+
+.product{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.product-image{
+    height: 170px;
+    background: #ebe5e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.product-details{
+    padding: 20px;
+}
+.product-details h3{
+    margin-bottom: 10px;
+
+
+}
+
+.product-details p{
+    color:#777;
+    margin-bottom:10px;
+}
+
+.price{
+    color: green !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.add-button{
+    width:100%;
+    padding:10px;
+    background: #bb5c5c;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor: pointer;
+}
+
+.add-button:hover{
+    background: #22c5c2;
+}
+
+#cart{
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 380px;
+    height:100%;
+    background: white;
+    padding: 25px;
+    box-shadow: -5px 0 15px #aaa;
+    transition: 0.3s;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+#cart.open{
+    right: 0;
+}
+
+.cart-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#closeCart{
+    background: red;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-item{
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.cart-name{
+    flex:1;
+}
+
+.quantity button{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.delete{
+    border: none;
+    background: white;
+    cursor:pointer
+}
+
+.total{
+    margin-top:25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#checkout{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #22c5b8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#dark{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24, 23, 23, 0.5);
+    display: none;
+}
+
+#dark.show{
+    display: block;
+}
+
+#orderMessage{
+    position:fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width:350px;
+    max-width: 90%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    z-index: 20;
+}
+#orderMessage.show{
+    display: block;
+}
+
+#orderMessage h2{
+    margin-bottom: 10px;
+}
+
+#orderMessage p{
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#done{
+    background: #742c2c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width:600px){
+    .hero h1{
+        font-size: 30px;
+    }
+    .search-box{
+        flex-direction: column;
+    }
+    #cart{
+        width:100%
+    }
+}

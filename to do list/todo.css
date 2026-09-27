@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial,sans-serif;
+    background: rgb(70, 70, 28);
+    color: #fffcee;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+.one{
+    width:750px;
+    max-width: 100%;
+    margin: auto;
+    background: #2e2612;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.3)
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.two{
+    text-align: center;
+    color: #b5b894;
+    margin-bottom: 25px;
+}
+
+.three{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.streak{
+    background: #393a18;
+    padding: 20px 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.streak h2{
+    color: #ddff6d;
+    margin-bottom: 5px;
+}
+
+.streak p{
+    color: #b3b894;
+    font-family: 15px;
+}
+
+.task{
+    width: 750px;
+    max-width:100%;
+    margin: 25px auto;
+    background:#373a18;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.task h2{
+    margin-bottom: 15px;
+}
+
+.input{
+    display: flex;
+    gap: 10px;
+}
+
+#search{
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.add{
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #fff86d;
+    color: white;
+    cursor:pointer;
+}
+
+.add:hover{
+    background: #d3e859;
+}
+
+#list{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.task-item{
+    background: #2e2e12;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-name{
+    flex: 1;
+}
+
+.task-item.completed .task-name{
+    text-decoration: line-through;
+    color:#8b8964
+}
+
+.task-buttons{
+    display: flex;
+    gap:5px;
+}
+
+.complete-task,.delete-task{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.complete-task{
+    background: #5ec522;
+}
+
+.delete-task{
+    background: #ef9744;
+}
+
+.empty{
+    text-align:center;
+    color: #b6b894;
+    margin-top: 15px;
+}
+
+.header{
+    width: 750px;
+    max-width: 100%;
+    margin: 25px auto 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2{
+    font-size:20px;
+
+}
+
+.header button{
+    background: #fffd6d;
+    color:white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.days{
+    width:750px;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.days div{
+    text-align: center;
+    color:#b3b894;
+    font-size: 15px;
+}
+
+.date{
+    width: 750px;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+}
+
+.day{
+    height: 65px;
+    background: #393a18;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.day:hover{
+    transform: translateY(-2px);
+}
+
+.day.empty{
+    background: transparent;
+    cursor: default;
+}
+
+.day.completed{
+    background: #8cc522;
+    color: white;
+}
+
+.day.missed{
+    background: #efa844;
+    color: white;
+}
+
+.day.today{
+    border: 2px solid #ffff6d;
+}
+
+.four{
+    width: 750px;
+    max-width: 100%;
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.five{
+    display: flex;
+    align-items: center;
+    gap:6px;
+    color:#b8b594;
+    font-size: 15px;
+}
+
+.green,.red,.grey{
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+}
+
+.green{
+    background: #66c522;
+}
+
+.red{
+    background: rgb(233, 42, 42);
+}
+
+.grey{
+    background: rgb(126, 114, 114);
+}
+
+.six{
+    width: 100%;
+    text-align: center;
+    color: #b8b894;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+@media(max-width: 600px){
+    .one{
+        padding: 20px;
+    }
+
+    .three{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .input{
+        flex-direction: column;
+    }
+
+    .day{
+        height: 45px;
+    }
+
+    .task-item{
+        gap:8px;
+    }
+}
